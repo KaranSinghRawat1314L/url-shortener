@@ -1,0 +1,106 @@
+# Root .gitignore for Fullstack Project (Frontend + Backend)
+
+# =========================
+
+# Node.js
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+
+# Environment variables
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs/
+*.log
+
+# =========================
+
+# Build / dist
+
+# =========================
+
+dist/
+build/
+frontend/build/
+frontend/dist/
+
+# =========================
+
+# IDE / Editor
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# Coverage / Testing
+
+# =========================
+
+coverage/
+
+# =========================
+
+# AWS / Secrets
+
+# =========================
+
+.aws/
+*.pem
+*.key
+
+# =========================
+
+# Redis dump (local)
+
+# =========================
+
+dump.rdb
+
+# =========================
+
+# Docker (optional)
+
+# =========================
+
+docker-compose.override.yml
+
+# =========================
+
+# Temporary files
+
+# =========================
+
+tmp/
+temp/

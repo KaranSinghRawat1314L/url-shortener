@@ -13,6 +13,7 @@ redirectRouter.get("/:shortCode", async (req, res) => {
 
     if (cachedUrl) {
       res.redirect(cachedUrl);
+      console.log("redis hit");
       setImmediate(() => incrementClick(shortCode));
       return;
     }

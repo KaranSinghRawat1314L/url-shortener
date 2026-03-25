@@ -19,6 +19,7 @@ redirectRouter.get("/:shortCode", async (req, res) => {
     }
 
     // 2. Fall back to DynamoDB
+    console.log("DB hit");
     const url = await getUrl(shortCode);
 
     if (!url) {

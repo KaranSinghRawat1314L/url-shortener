@@ -9,6 +9,7 @@ redirectRouter.get("/:shortCode", async (req, res) => {
     const { shortCode } = req.params;
 
     // 1. Check Redis cache first
+    console.log("got shortcode");
     const cachedUrl = await redisClient.get(shortCode);
 
     if (cachedUrl) {

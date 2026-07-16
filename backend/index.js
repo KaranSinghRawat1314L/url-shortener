@@ -7,7 +7,7 @@ const urlRouter = require("./routes/url.routes");
 const redirectRouter = require("./routes/redirect.routes");
 
 const app = express();
-
+app.set("trust proxy", 1);
 // Parse JSON bodies
 app.use(express.json());
 

@@ -17,20 +17,23 @@ redis.on("error", (err) => console.error("Redis error:", err.message));
 
 module.exports = {
   async get(key) {
-    try {
-      return await redis.get(key);
-    } catch (err) {
-      console.error("Redis GET error:", err.message);
-      return null;
-    }
-  },
+  if (!redis.isReady) return null;
 
-  async setEx(key, ttlSeconds, value) {
-    if (!value || ttlSeconds <= 0) return;
-    try {
-      await redis.set(key, value, { EX: ttlSeconds });
-    } catch (err) {
-      console.error("Redis SETEX error:", err.message);
-    }
-  },
+  try {
+    return await redis.get(key);
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+},
+
+  async setEx(key, ttl, value) {
+  if (!redis.isReady) return;
+
+  try {
+    await redis.set(key, value, { EX: ttl });
+  } catch (err) {
+    console.error(err);
+  }
+},
 };

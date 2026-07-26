@@ -20,7 +20,10 @@ module.exports = {
   if (!redis.isReady) return null;
 
   try {
-    return await redis.get(key);
+    
+    const ans = await redis.get(key);
+    console.log("Really redis hit");
+    return ans;
   } catch (err) {
     console.error(err);
     return null;

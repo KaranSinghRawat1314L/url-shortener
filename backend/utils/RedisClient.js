@@ -22,7 +22,7 @@ module.exports = {
   try {
     
     const ans = await redis.get(key);
-    console.log("Really redis hit");
+    if(ans) console.log("Really redis hit");
     return ans;
   } catch (err) {
     console.error(err);

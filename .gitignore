@@ -1,0 +1,84 @@
+# =========================
+# Dependencies
+# =========================
+
+node_modules/
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Build Output
+# =========================
+
+dist/
+build/
+frontend/dist/
+frontend/build/
+backend/dist/
+backend/build/
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Test Coverage
+# =========================
+
+coverage/
+
+# =========================
+# Secrets / Certificates
+# =========================
+
+.aws/
+*.pem
+*.key
+
+# =========================
+# Local Database / Cache Files
+# =========================
+
+dump.rdb
+
+# =========================
+# Docker
+# =========================
+
+docker-compose.override.yml
+
+# =========================
+# Temporary Files
+# =========================
+
+tmp/
+temp/
